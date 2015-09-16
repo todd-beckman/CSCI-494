@@ -8,23 +8,15 @@
         <link rel="stylesheet" type="text/css" href="/includes/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="/css/profile.css">
-        <script type="text/javascript" src="/includes/react/react.js"></script>
-        <script type="text/javascript" src="/includes/react/JSXTransformer.js"></script>
+        <script type="text/javascript" src="/includes/react.js"></script>
         <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="js/profile.js"></script>
+        <script type="text/javascript" src="js/blog.js"></script>
         <script type="text/javascript">
 function init() {
     var p = getUrlVars()["p"];
-    if (p != undefined) {
-        ajax(ROOTURL+"/people/" + p + ".json", function(response) {
-            var data = JSON.parse(response);
-            document.getElementById("personpic").innerHTML = "<img src=\"/img/" + p + ".jpg\">";
-            document.getElementById("personname").innerHTML = data.name;
-            document.getElementById("persondesc").innerHTML = data.desc;
-            document.getElementById("email").innerHTML = data.email;
-            document.getElementById("github").innerHTML = "<a href=\"https://github.com/" + data.github + "\">" + data.github + "</a>";
-            document.getElementById("website").innerHTML = "<a href=\"" + data.website + "\">Link Here</a>";
-        });
-    }
+    initprofile(p);
+    initblog(p);
 }
         </script>
     </head>
@@ -55,27 +47,7 @@ function init() {
                     </div>
                 </a>
             </div>
-            <div id="personarea" class="row">
-                <div class="col-xs-12 col-sm-5">
-                    <div id="personpic"></div>
-                    <div id="personinfo" class="row">
-                        <div class="col-xs-3">
-                            <p>Email:</p>
-                            <p>Github:</p>
-                            <p>Website:</p>
-                        </div>
-                        <div class="col-xs-9">
-                            <p id="email"></p>
-                            <p id="github"></p>
-                            <p id="website"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-7">
-                    <h1 id="personname"></h1>
-                    <div id="persondesc"></div>
-                </div>
-            </div>
+            <div id="personarea" class="row"></div>
         </div>
     </body>
 </html>

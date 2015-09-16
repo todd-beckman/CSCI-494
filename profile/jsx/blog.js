@@ -1,0 +1,3 @@
+window.initblog = function(p) {
+
+}

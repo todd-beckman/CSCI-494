@@ -11,16 +11,13 @@ window.getUrlVars = function () {
     return vars;
 }
 
-window.httpGetAsync = function(theUrl, callback, content) {
+window.ajax = function(theUrl, callback, sync) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
             callback(xmlHttp.responseText);
         }
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-    if (content !== undefined) {
-        xmlHttp.setRequestHeader('Content-Type', content);
-    }
+    xmlHttp.open("GET", theUrl, sync ? false : true); // true for asynchronous
     xmlHttp.send(null);
 }

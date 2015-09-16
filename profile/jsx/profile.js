@@ -1,5 +1,22 @@
 window.initprofile = function(p) {
     var url = ROOTURL+"/people/" + p + ".json";
+    var durl = ROOTURL+"/profile/" + p + "desc.html"; 
+    var ProfileDesc = React.createClass({
+        getInitialState : function () {
+            return { data : ""};
+        },
+        loadState : function () {
+            ajax(url, function (response) {
+                this.setState(JSON.parse(response));
+            }.bind(this));
+        },
+        componentDidMount : function () {
+            this.loadState();
+        },
+        render : function (){
+            return "";
+        }
+    });
     var Profile = React.createClass({
         getInitialState : function () {
             return {name: null, title: "", email: "", github: "", website: "", desc: ""}
@@ -18,11 +35,7 @@ window.initprofile = function(p) {
             }
             var url="/img/" + this.state.name.split(" ")[0].toLowerCase() + ".jpg";
             var git="https://github.com/" +  this.state.github;
-            var content = this.state.desc.split("\n\n").map(function (line, key) {
-                return (
-                    <p key={key} className="lead">{line}</p>
-                );
-            });
+
             return (<div>
                 <div className="col-xs-12 col-sm-5">
                     <div id="personpic"><img src={url} alt={this.state.name}/></div>
@@ -41,7 +54,8 @@ window.initprofile = function(p) {
                 </div>
                 <div className="col-xs-12 col-sm-6">
                     <h1>{this.state.name}</h1>
-                    <div>{content}</div>
+                    <h2>{this.state.title}</h2>
+                    <iframe src={durl}></iframe>
                 </div>
             </div>);
         }

@@ -1,5 +1,22 @@
 window.initprofile = function(p) {
     var url = ROOTURL+"/people/" + p + ".json";
+    var durl = ROOTURL+"/profile/" + p + "desc.html"; 
+    var ProfileDesc = React.createClass({displayName: "ProfileDesc",
+        getInitialState : function () {
+            return { data : ""};
+        },
+        loadState : function () {
+            ajax(url, function (response) {
+                this.setState(JSON.parse(response));
+            }.bind(this));
+        },
+        componentDidMount : function () {
+            this.loadState();
+        },
+        render : function (){
+            return "";
+        }
+    });
     var Profile = React.createClass({displayName: "Profile",
         getInitialState : function () {
             return {name: null, title: "", email: "", github: "", website: "", desc: ""}
@@ -18,11 +35,7 @@ window.initprofile = function(p) {
             }
             var url="/img/" + this.state.name.split(" ")[0].toLowerCase() + ".jpg";
             var git="https://github.com/" +  this.state.github;
-            var content = this.state.desc.split("\n\n").map(function (line, key) {
-                return (
-                    React.createElement("p", {key: key, className: "lead"}, line)
-                );
-            });
+
             return (React.createElement("div", null, 
                 React.createElement("div", {className: "col-xs-12 col-sm-5"}, 
                     React.createElement("div", {id: "personpic"}, React.createElement("img", {src: url, alt: this.state.name})), 
@@ -41,7 +54,8 @@ window.initprofile = function(p) {
                 ), 
                 React.createElement("div", {className: "col-xs-12 col-sm-6"}, 
                     React.createElement("h1", null, this.state.name), 
-                    React.createElement("div", null, content)
+                    React.createElement("h2", null, this.state.title), 
+                    React.createElement("iframe", {src: durl})
                 )
             ));
         }

@@ -39,20 +39,48 @@ p.lead {
     margin-bottom: 0;
     font-weight: 800;
 }
-#motto {
-    margin-top: -5px;
+#motto > h3 {
+    width: 100%;
+    overflow: none;
 }
 #header{
     background-color: #37BFED;
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
+}
+#header:hover{
+    background-color: #32ACD5;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 #explore{
-    background-color: #32ACD5;
+    background-color: #2C99BE;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
+}
+#explore:hover{
+    background-color: #2686A6;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 #contact{
-    background-color: #2686A6;
+    background-color: #21738E;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
+}
+#contact:hover{
+    background-color: #1C6076;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 @media screen and (max-width: 767px) {
     #intro{

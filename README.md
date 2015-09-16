@@ -13,7 +13,9 @@ The purpose of this website is to provide a professional profile for each of the
 
 The target audiences of this website are either hiring managers, job interviewers, and passerby's looking for a short laugh.
 
-The use of blue in the background is completely arbitrary. The varying degrees of gray are to maintain a professional black-on-white without appearing too default. Alex has requested, for no reason other than that it looks nice, that most elements have a box shadow.
+The varying degrees of gray are to maintain a professional black-on-white without appearing too default. The varying degrees of blue along the header are used to make the header's components appear distinct while still making it appear as one unit. The opening (stock) image with generic motto-sounding text was used because it is a common trend in professional-looking websites.
+
+Alex has requested that most elements have a box shadow. This helps to make some elements float and make them stand out.
 
 Alex has provided the text for some of the website's content already. However, it is only plain text.
 

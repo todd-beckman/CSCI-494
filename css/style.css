@@ -3,7 +3,7 @@ body {
     padding: 0px;
     margin: auto;
     font-family: serif;
-    background-color: #7FD7F5;
+    background-color: #444;
 }
 a{
     color: inherit;
@@ -18,16 +18,14 @@ a:visited{
     text-decoration: none;
 }
 p {
-    max-width: 600px;
+    max-width: 960px;
     margin: auto;
 }
 p.lead {
     margin-top: 10px;
     padding: 5px;
-    background-color: #BBB;
 }
 #wrapper {
-    max-width: 960px;
     background-color: #CCC;
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
@@ -42,7 +40,7 @@ p.lead {
     font-weight: 800;
 }
 #motto {
-    margin-top: 10px;
+    margin-top: -5px;
 }
 #header{
     background-color: #37BFED;
@@ -51,12 +49,48 @@ p.lead {
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 #explore{
-    background-color: #06AA50;
+    background-color: #32ACD5;
 }
 #contact{
-    background-color: #CC3680;
+    background-color: #2686A6;
+}
+@media screen and (max-width: 767px) {
+    #intro{
+        font-size: 32pt;
+        height: 50%;
+    }
+    .lead{
+        font-size: 16pt;
+    }
+    #intro > p{
+        font-size: 32pt;
+        overflow: none;
+    }
+}
+@media screen and (min-width: 768px) {
+    #intro{
+        font-size: 32pt;
+        height: 400px;
+    }
+    #intro > p{
+        width: 700px;
+        overflow: none;
+    }
+}
+#intro{
+    margin-top: 10px;
+    font-weight: 800;
+    color: white;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.25)),
+    url('../img/bg.jpg');
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 .profile{
+    background-color: #BBB;
     height: 300px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -78,7 +112,7 @@ p.lead {
     transition: background-color 0.40s;
 }
 .profilelink:hover{
+    background-color: #AAA;
     -webkit-transition: background-color 0.40s;
     transition: background-color 0.40s;
-    background-color: #BBB;
 }

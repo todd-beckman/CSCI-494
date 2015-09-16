@@ -15,7 +15,7 @@
 function init() {
     var p = getUrlVars()["p"];
     if (p != undefined) {
-        httpGetAsync(ROOTURL+"/profile/" + p + ".json", function(response) {
+        httpGetAsync(ROOTURL+"/people/" + p + ".json", function(response) {
             var data = JSON.parse(response);
             document.getElementById("personpic").innerHTML = "<img src=\"/img/" + p + ".jpg\">";
             document.getElementById("personname").innerHTML = data.name;

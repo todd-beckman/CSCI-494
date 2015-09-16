@@ -9,8 +9,10 @@
             href="/includes/bootstrap.min.css">
         <link rel="stylesheet" type="text/css"
             href="/css/style.css">
+        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="/js/profilelinks.js"></script>
     </head>
-    <body>
+    <body onload="loadlinks()">
         <div id="wrapper" class="container-fluid">
             <div id="header" class="row">
                 <a href="/">
@@ -54,50 +56,7 @@
                     <h1>Meet Our Team</h1>
                 </div>
             </div>
-            <div id="profiles" class="row-fluid">
-                <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=alex"><div class="profilelink">
-                        <img src="/img/alex.jpg" class="profilepic" alt="Alex Huleatt">
-                        <h2>Alex Huleatt</h2>
-                        <h3>President <br>&amp; Synergy Expert</h3>
-                    </div></a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=luke"><div class="profilelink">
-                        <img src="/img/luke.jpg" class="profilepic" alt="Luke Welna">
-                        <h2>Luke Welna</h2>
-                        <h3>Assistant to the Regional<br>Synergy Integrator</h3>
-                    </div></a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=mackenzie"><div class="profilelink">
-                        <img src="/img/mackenzie.jpg" class="profilepic" alt="MacKenzie O'Bleness">
-                        <h2>MacKenzie O'Bleness</h2>
-                        <h3>Lead V.P. of Synergy</h3>
-                    </div></a>
-                </div>
-                 <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=todd"><div class="profilelink">
-                       <img src="/img/todd.jpg" class="profilepic" alt="Todd Beckman">
-                        <h2>Todd Beckman</h2>
-                        <h3>V.P. of Web <br>Synergy Integration</h3>
-                    </div></a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=brent"><div class="profilelink">
-                        <img src="/img/brent.jpg" class="profilepic" alt="Brent Echols">
-                        <h2>Brent Echols</h2>
-                        <h3>Lead Web Integrator</h3>
-                    </div></a>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 text-center profile">
-                    <a href="/profile/?p=kalvyn"><div class="profilelink">
-                        <img src="/img/kalvyn.jpg" class="profilepic" alt="Kalvyn Lu">
-                        <h2>Kalvyn Lu</h2>
-                        <h3>Lead Web Synergizer</h3>
-                    </div></a>
-                </div>
-            </div>
+            <div id="profiles" class="row-fluid"></div>
             <div id="footer" class="row">
                 <div class="col-xs-12 text-center">
                     &copy; 2015 SyScI LLC Incorporated

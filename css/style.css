@@ -5,27 +5,6 @@ body {
     font-family: serif;
     background-color: #7FD7F5;
 }
-#pagetitle {
-    margin-top: 0;
-    font-weight: 800;
-    font-size: 40pt;
-}
-#logo{
-    height: 100px;
-}
-#wrapper {
-    max-width: 960px;
-    background-color: #CCC;
-    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-}
-#header{
-    background-color: #37BFED;
-    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-}
 a{
     color: inherit;
     text-decoration: none;
@@ -38,19 +17,44 @@ a:visited{
     color: inherit;
     text-decoration: none;
 }
-h3{
-    margin-top: 0;
-    margin-bottom: 0;
-}
 p {
     max-width: 600px;
     margin: auto;
 }
 p.lead {
+    margin-top: 10px;
     padding: 5px;
+    background-color: #BBB;
+}
+#wrapper {
+    max-width: 960px;
+    background-color: #CCC;
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+}
+#logo{
+    height: 50px;
+}
+#pagetitle {
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+#motto {
+    margin-top: 10px;
+}
+#header{
+    background-color: #37BFED;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+}
+#explore{
+    background-color: #06AA50;
+}
+#contact{
+    background-color: #CC3680;
 }
 .profile{
     height: 300px;

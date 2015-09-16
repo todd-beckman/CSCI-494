@@ -1,15 +1,24 @@
 body {
+    margin: 0px;
+    padding: 0px;
+    margin: auto;
     font-family: serif;
     background-color: #7FD7F5;
 }
-#pagetitle{
+#pagetitle {
+    margin-top: 0;
+    font-weight: 800;
     font-size: 40pt;
 }
 #logo{
     height: 100px;
 }
 #wrapper {
+    max-width: 960px;
     background-color: #CCC;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 #header{
     background-color: #37BFED;
@@ -19,14 +28,37 @@ body {
 }
 a{
     color: inherit;
+    text-decoration: none;
 }
 a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+a:visited{
     color: inherit;
     text-decoration: none;
 }
 h3{
     margin-top: 0;
     margin-bottom: 0;
+}
+p {
+    max-width: 600px;
+    margin: auto;
+}
+p.lead {
+    padding: 5px;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+}
+.profile{
+    height: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 .profilepic{
     width: 150px;
@@ -37,10 +69,12 @@ h3{
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 .profilelink{
-    border-radius: 10px;
-    -webkit-transition: background-color: 1s;
-    transition: backgroudn-color: 1s;
+    height: 300px;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 .profilelink:hover{
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
     background-color: #BBB;
 }

@@ -1,7 +1,7 @@
 #CSCI 494
 By Todd Beckman
 
-This is a repository for a class. It is also live at: http://sysci.sxy
+This is a repository for a class. It is also live at: http://sysci.xyz
 
 ##Assignment 2 Scenario
 

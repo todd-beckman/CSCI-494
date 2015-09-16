@@ -1,0 +1,10 @@
+#personarea {
+    margin-top: 10px;
+}
+#personpic, #personinfo {
+    margin: auto;
+    width: 300px;
+}
+#personpic > img{
+    width: 300px;
+}

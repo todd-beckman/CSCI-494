@@ -71,6 +71,7 @@ p.lead {
     #intro{
         font-size: 32pt;
         height: 400px;
+        padding-top: 200px;
     }
     #intro > p{
         width: 700px;
@@ -82,9 +83,9 @@ p.lead {
     font-weight: 800;
     color: white;
     background-image: linear-gradient(
-        rgba(0, 0, 0, 0.25),
-        rgba(0, 0, 0, 0.25)),
-    url('../img/bg.jpg');
+        rgba(32, 128, 255, 0.25),
+        rgba(32, 128, 255, 0.25)),
+    url('../img/bird.jpg');
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);

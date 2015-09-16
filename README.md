@@ -29,6 +29,6 @@ Installs required
 
 Once you have node set up:
 
-        - Bootstrap (npm install boostrap)
+        - Bootstrap (npm install boostrap). This is optional; relinking the link to bootstrap to your own local instance in the HTML files is an alternative.
 
 

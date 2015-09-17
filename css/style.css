@@ -18,6 +18,7 @@ a:visited{
     text-decoration: none;
 }
 p {
+    font-size: 14pt;
     max-width: 960px;
     margin: auto;
 }
@@ -26,7 +27,7 @@ p.lead {
     padding: 5px;
 }
 #wrapper {
-    background-color: #CCC;
+    background-color: #FFFFFF;
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
@@ -119,13 +120,15 @@ p.lead {
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
 }
 .profile{
-    background-color: #BBB;
+    background-color: #DDD;
     height: 300px;
     margin-top: 15px;
     margin-bottom: 15px;
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 .profilepic{
     width: 150px;
@@ -137,11 +140,9 @@ p.lead {
 }
 .profilelink{
     height: 300px;
-    -webkit-transition: background-color 0.40s;
-    transition: background-color 0.40s;
 }
-.profilelink:hover{
-    background-color: #AAA;
+.profile:hover{
+    background-color: #CCC;
     -webkit-transition: background-color 0.40s;
     transition: background-color 0.40s;
 }

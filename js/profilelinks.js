@@ -6,12 +6,11 @@ function loadlinks() {
         names.splice(names.indexOf("."), 1);
         var data = [], numitems = names.length, numloaded = 0;
         function finishLoading() {
-            console.log(JSON.stringify(data));
             var str = "";
             for (var i = 0; i < data.length; i++) {
                 var name = data[i].name;
                 var shortname = name.split(" ")[0].toLowerCase();
-                str += "<div class=\"col-xs-12 col-sm-6 col-md-4 text-center profile\"><a href=\"/profile/?p=" + shortname + "\"><div class=\"profilelink\"><img src=\"/img/" + shortname + ".jpg\" class=\"profilepic\" alt=\"" + name + "\"><h2>" + name + "</h2><h3>" + data[i].title + "</h3></div></a></div>";
+                str += "<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center profile\"><a href=\"/profile/?p=" + shortname + "\"><div class=\"profilelink\"><img src=\"/img/" + shortname + ".jpg\" class=\"profilepic\" alt=\"" + name + "\"><h2>" + name + "</h2><h3>" + data[i].title + "</h3></div></a></div>";
             }
             document.getElementById("profiles").innerHTML = str;
         }
@@ -21,7 +20,6 @@ function loadlinks() {
                 function (response) {
                     var d = JSON.parse(response);
                     var index = names.indexOf(d.name.split(" ")[0].toLowerCase() + ".json");
-                    console.log(index);
                     data[index] = d;
                     numloaded++;
                     if (numloaded == numitems) {

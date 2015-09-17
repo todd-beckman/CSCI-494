@@ -1,6 +1,6 @@
 <?php
     $p = $_GET["p"] or "alex";
-    $about=json_decode(file_get_contents("../people/".$p.".json"));
+    $about=json_decode(file_get_contents("../people/$p.json"));
     $shortname=strtolower(substr($about->name, 0, strpos($about->name, " ")));
 ?>
 <!DOCTYPE html>
@@ -45,18 +45,17 @@
             </div>
             <div id="personarea" class="row">
                 <div class="col-xs-12 col-sm-5">
-                    <div id="personpic"><img src=<?='"/img/'.$shortname.'.jpg"'?> alt=<?="\"$about->name\""?>></div>
+                    <div id="personpic"><img src=<?="\"/img/$shortname.jpg\""?> alt=<?="\"$about->name\""?>></div>
                     <div id="personinfo" class="row">
-                        <div class="col-xs-3">
-                            <p class="lead">Email:</p>
-                            <p class="lead">Github:</p>
-                            <p class="lead">Website:</p>
-                        </div>
-                        <div class="col-xs-9">
-                            <p class="lead"><?=$about->email?></p>
-                            <p class="lead"><a href=<?="\"https://github.com/{$about->github}\""?>><?=$about->github?></a></p>
-                            <p class="lead"><a href=<?="\"{$about->website}\""?>>Link Here</a></p>
-                        </div>
+                        <?php
+
+$arr = $about->links;
+foreach ($arr as $key => $value) {
+    echo "<a href=\"$value\"><p class=\"lead\">$key</p></a>";
+}
+
+?>
+
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-7">

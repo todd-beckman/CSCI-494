@@ -1,9 +1,31 @@
 #personarea {
     margin-top: 10px;
 }
+#personpic > img {
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+}
 #personpic, #personinfo {
+    text-align: center;
     margin: auto;
-    width: 300px;
+}
+#personinfo > a > p {
+    background-color: #DDD;
+    width: 310px;
+    margin: auto;
+    margin-top: 10px;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
+    -webkit-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+
+}
+#personinfo > a > p:hover{
+    background-color: #CCC;
+    -webkit-transition: background-color 0.40s;
+    transition: background-color 0.40s;
 }
 #personpic > img{
     width: 300px;

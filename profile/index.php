@@ -43,10 +43,10 @@
                     </div>
                 </a>
             </div>
-            <div id="personarea" class="row">
+            <div id="personarea" class="row-fluid">
                 <div class="col-xs-12 col-sm-5">
                     <div id="personpic"><img src=<?="\"/img/$shortname.jpg\""?> alt=<?="\"$about->name\""?>></div>
-                    <div id="personinfo" class="row">
+                    <div id="personinfo" class="row-fluid">
                         <?php
 
 $arr = $about->links;

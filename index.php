@@ -11,7 +11,6 @@
         <link rel="stylesheet" type="text/css"
             href="/css/style.css">
         <script type="text/javascript" src="/js/script.js"></script>
-        <script type="text/javascript" src="/js/profilelinks.js"></script>
     </head>
     <body onload="loadlinks()">
         <div id="wrapper" class="container-fluid">
@@ -59,7 +58,21 @@
                     <h1>Meet Our Team</h1>
                 </div>
             </div>
-            <div id="profiles" class="row-fluid"></div>
+            <div id="profiles" class="row-fluid">
+                <?php
+$people = scandir("people");
+for ($i = 0; $i < count($people); $i++) {
+    $name=$people[$i];
+    if (2 < strlen($name)) {
+        $data = json_decode(file_get_contents("people/$name"));
+        $fullname=$data->name;
+        $shortname=strtolower(substr($fullname, 0, strrpos($fullname, " ")));
+        $title=$data->title;
+        echo "<div class=\"col-xs-12 col-sm-6 col-md-4 col-lg-3 text-center profile\"><a href=\"/profile/?p=$shortname\"><div class=\"profilelink\"><img src=\"/img/$shortname.jpg\" class=\"profilepic\" alt=\"$fullname\"><h2>$fullname</h2><h3>$title</h3></div></a></div>";
+    }
+}
+                ?>
+            </div>
             <div id="footer" class="row">
                 <div class="col-xs-12 text-center">
                     &copy; 2015 SyScI LLC Incorporated

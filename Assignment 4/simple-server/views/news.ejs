@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/news.css" />
+</head>
+<body>
+    <h1><%= title %></h1>
+<div class="container-fluid"><div class="row">
+    <% for(var i=0; i<data.length; i++) {
+        var post = data[i];
+    %>
+    <div class="col-xs-12 col-sm-6 col-lg-4">
+        <!--<div><%- JSON.stringify(post) -%></div>-->
+        <% switch(post.type){
+            case "picture":
+        %>
+            <div class="post picture">
+                <p class="content"><%=post.content%></p>
+                <img src="<%=post.imgUrl%>"/>
+                <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
+            </div>
+        <%
+            break;
+            case "news":
+        %>
+            <div class="post news">
+                <h2 class="heading"><a href="<%post.url%>" class="headinglink"><%=post.heading%></a></h2>
+                <p class="content"><%=post.content%></p>
+                <p class="author"><%=post.author%></p>
+                <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
+                <p class="email"><a href="<%=post.email%>">Email</a></p>
+            </div>
+        <%
+                break;
+            case "link":
+        %>
+            <div class="post link">
+                <p class="content"><%=post.content%></p>
+                <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
+            </div>
+        <%
+                break;
+        }%>
+    </div>
+    <% } %>
+</div></div>
+</body>
+</html>

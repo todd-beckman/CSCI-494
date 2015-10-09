@@ -1,0 +1,21 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid #999;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #111;
+    flex-grow: 1;
+}
+
+.img {
+    float: left;
+    border-radius: 15px;
+    width: 80px;
+    padding: 10px;
+}

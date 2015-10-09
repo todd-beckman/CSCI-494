@@ -1,5 +1,6 @@
-body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
+body{
+  font-family: 'Slabo 27px', serif;
   color: #ccc;
   background-color: #333;
 }
@@ -18,4 +19,8 @@ li {
 
 a {
   color: #00B7FF;
+}
+
+a.linkonblack {
+  color: #00CCFF;
 }

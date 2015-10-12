@@ -5,46 +5,59 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/news.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1><%= title %> <a href="/" class="linkonblack">(Go Back Home --&gt;)</a></h1>
-<div class="container-fluid"><div class="row">
-    <% for(var i=0; i<data.length; i++) {
+    <div id="navbar" class="container-fluid"><div class="row-fluid">
+        <a href="/"><div class="col-xs-4">Home</div></a>
+        <a href="/news/"><div class="col-xs-4 here">News</div></a>
+        <a href="/members/"><div class="col-xs-4">Members</div></a>
+    </div></div>
+<div id="list" class="container-fluid"><div class="row-fluid">
+    <% for(var i = 0; i < 15; i++) {
         var post = data[i];
-    %>
-    <div class="col-xs-12 col-sm-6 col-lg-4">
-        <!--<div><%- JSON.stringify(post) -%></div>-->
-        <% switch(post.type){
+        switch(post.type){
             case "picture":
         %>
-            <div class="post picture">
-                <p class="content"><%=post.content%></p>
-                <img src="<%=post.imgUrl%>"/>
+            <div class="post picture col-xs-12 col-sm-6 col-md-4 col-lg-3 <%
+                if (i < 4) {
+                    %>priority<%
+                }
+            %>">
+                <p class="content lead"><%=post.content%></p>
+                <div><img src="<%=post.imgUrl%>"/></div>
                 <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
             </div>
         <%
             break;
             case "news":
         %>
-            <div class="post news">
-                <h2 class="heading"><a href="<%post.url%>" class="headinglink"><%=post.heading%></a></h2>
+            <div class="post news col-xs-12 <%
+                if (4 < i) {
+                    %>col-sm-6 col-md-4 col-lg-3<%
+                }
+            %>">
+                <h2 class="heading"><a href="#<%=post.url%>" class="headinglink"><%=post.heading%></a></h2>
                 <p class="content"><%=post.content%></p>
                 <p class="author"><%=post.author%></p>
                 <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
                 <p class="email"><a href="<%=post.email%>">Email</a></p>
             </div>
         <%
-                break;
+            break;
             case "link":
         %>
-            <div class="post link">
+            <div class="post link col-xs-12 col-sm-6 col-md-4 col-lg-3 <%
+                if (i < 4) {
+                    %>priority<%
+                }
+            %>">
                 <p class="content"><%=post.content%></p>
                 <p class="date"><%=new Date(post.datePublished).toUTCString()%></p>
             </div>
         <%
                 break;
         }%>
-    </div>
     <% } %>
 </div></div>
 </body>

@@ -5,25 +5,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/members.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <h1><%= title %> <a href="/" class="linkonblack">(Go Back Home --&gt;)</a></h1>
-<div class="container-fluid"><div class="row">
-    <% for(var i=0; i<data.length; i++) {
-        var post = data[i];
-    %>
-    <div class="col-xs-12 col-sm-6 col-lg-4">
-        <div class="post">
-            <div class="container-fluid">
-                <img class="img" src="<%=post.avatar%>" />
-                <h2 class="user"><%=post.user%></h2>
-                <p class="email"><a href="mailto:<%=post.email%>"><%=post.email%></a></p>
-            </div>
+    <div id="navbar" class="container"><div class="row">
+        <a href="/"><div class="col-xs-4">Home</div></a>
+        <a href="/news/"><div class="col-xs-4">News</div></a>
+        <a href="/members/"><div class="col-xs-4 here">Members</div></a>
+    </div></div>
+    <div id="list" class="container-fluid"><div class="row">
+        <% for(var i=0; i<data.length; i++) {
+            var post = data[i];
+        %>
+        <div class="col-xs-12 col-sm-6 col-lg-4 post">
+            <img class="img" src="<%=post.avatar%>" />
+            <h2 class="user"><%=post.user%></h2>
             <p><%=post.bio%></p>
             <p class="joined">Since <%=new Date(post.joined).toUTCString()%></p>
+            <p class="email"><a href="mailto:<%=post.email%>"><%=post.email%></a></p>
         </div>
-    </div>
-    <% } %>
-</div></div>
+        <% } %>
+    </div></div>
 </body>
 </html>

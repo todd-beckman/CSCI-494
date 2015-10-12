@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <p>Read up some of the <a href="/news/">news</a>.</p>
-    <p>Here are a few <a href="/members/">members</a>.</p>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id="navbar" class="container"><div class="row">
+        <a href="/"><div class="col-xs-4 here">Home</div></a>
+        <a href="/news/"><div class="col-xs-4">News</div></a>
+        <a href="/members/"><div class="col-xs-4">Members</div></a>
+    </div></div>
+    <div class="container"><div class="row">
+        <div class="col-xs-12">
+            <h1><%= title %></h1>
+            <p>Welcome to <%= title %></p>
+            <p>Read up some of the <a href="/news/">news</a>.</p>
+            <p>Here are a few <a href="/members/">members</a>.</p>
+        </div>
+    </div></div>
+</body>
 </html>

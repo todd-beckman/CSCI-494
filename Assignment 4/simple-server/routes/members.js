@@ -3,15 +3,18 @@ var router = express.Router();
 var slug = require('slug');
 var random = require('faker');
 
+function rendermembers(req, res, next) {
+  //var data = generatedData; //See Bottom
+  var data = generateMembers();
+  console.log(data);
+  res.render('members', {title: 'Members', data:data });
 
+}
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-    //var data = generatedData; //See Bottom
-    var data = generateMembers();
-    console.log(data);
-    res.render('members', {title: 'Members', data:data });
-});
+router.get('/', rendermembers);
+
+router.get('/index.html', rendermembers);
 
 module.exports = router;
 
@@ -26,7 +29,7 @@ function generateMembers() {
             "joined": random.date.recent(),
             "bio": randomWords(~~(Math.random() * 30) + 15),
             //  Thanks to this resource: https://avatars.io/
-            //  and to the Twitter userbase for this source 
+            //  and to the Twitter userbase for this source
             "avatar": "http://avatars.io/twitter/"+~~(Math.random()*1000)
         };
     }

@@ -3,15 +3,17 @@ var router = express.Router();
 var slug = require('slug');
 var random = require('faker');
 
-
+function rendernews(req, res, next) {
+  //var data = generatedData; //See Bottom
+  var data = generateBlogPosts();
+  console.log(data);
+  res.render('news', {title: 'News', data:data });
+}
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-    //var data = generatedData; //See Bottom
-    var data = generateBlogPosts();
-    console.log(data);
-    res.render('news', {title: 'News', data:data });
-});
+router.get('/', rendernews);
+
+router.get('/index.html', rendernews);
 
 module.exports = router;
 

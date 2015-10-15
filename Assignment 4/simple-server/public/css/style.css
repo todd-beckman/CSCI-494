@@ -5,27 +5,21 @@ body{
     color: #ccc;
     background-color: #333;
 }
-
 h1 {
     padding-left: 20px;
 }
-
 h2 {
     font-size: 18pt;
 }
-
 li {
     list-style-type: none;
 }
-
 a {
     color: #00B7FF;
 }
-
 a.linkonblack {
     color: #00CCFF;
 }
-
 #navbar > div > a {
     color: #999;
     font-size: 24px;

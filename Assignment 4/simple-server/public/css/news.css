@@ -1,16 +1,13 @@
 img {
     max-width: 800px;
 }
-
 a {
     color: #88A;
 }
-
 #list > div {
     display: flex;
     flex-wrap: wrap;
 }
-
 .post {
     display: inline-block;
     padding-top: 10px;
@@ -21,23 +18,19 @@ a {
     border-left: solid 1px #333;
     border-right: solid 1px #333;
 }
-
 .priority {
     flex: 4;
 }
-
 .post > .author,
 .post > .date,
 .post > .email {
     text-align: right;
 }
-
 .picture > div {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-
 .picture > div > img {
     padding-bottom: 10px;
     overflow: hidden;

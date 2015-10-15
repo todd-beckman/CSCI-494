@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 .post {
     padding-top: 1px;
     margin-top: 1px;
@@ -12,12 +11,10 @@
     border-left: solid 1px #333;
     border-right: solid 1px #333;
 }
-
 .email {
     padding-right: 100px;
     overflow-x: hidden;
 }
-
 .img {
     border-radius: 15px;
     height: 80px;

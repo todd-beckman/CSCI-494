@@ -18,7 +18,7 @@
             var post = data[i];
         %>
         <div class="col-xs-12 col-sm-6 col-lg-4 post">
-            <img class="img" src="<%=post.avatar%>" />
+            <img class="img" src="<%=post.avatar%>" alt="<%=post.user%>" />
             <h2 class="user"><%=post.user%></h2>
             <p><%=post.bio%></p>
             <p class="joined">Since <%=new Date(post.joined).toUTCString()%></p>
